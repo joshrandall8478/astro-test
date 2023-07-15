@@ -70,10 +70,10 @@ li::marker
             }
         }
         img{
-            border: 2px solid $color_3;
             border-radius: 25px;
             height: auto;
-            width: 450px;
+            max-width: 450px;
+            max-height: 300px;
             float: right;
             margin-bottom: 15px;
         }
@@ -86,8 +86,12 @@ li::marker
 
 
 .blog-image{
-    border: 3px solid $color_3;
     border-radius: 25px;
+}
+
+.blog__container{
+    @extend .main__content;
+    grid-template-rows: 0.5fr 1fr;
 }
 
 .blog__content{
@@ -99,6 +103,23 @@ li::marker
         border: 3px solid $color_4;
         margin: 15px 0;
         border-radius: 25px;
+    }
+    a{
+        color: $color_3;
+        &:hover {
+            color: $color_2;
+            transition: all 0.3s ease;
+        }
+    }
+    img{
+        border-radius: 25px;
+        height: auto;
+        border: 3px solid $color_1;
+        max-width: 1000px;
+    }
+    .blog-image{
+        border-style: none;
+        max-width: 300px;
     }
 }
 
@@ -142,8 +163,11 @@ li::marker
         h2{
             font-size: 2rem;
         }
-        img {
-            width: 200px;
+        .blog-image {
+            max-width: 200px;
+        }
+        img{
+            max-width: 500px;
         }
     }
     
@@ -172,9 +196,6 @@ li::marker
                 }
             }
             img{
-                border: 2px solid $color_3;
-                border-radius: 25px;
-                height: auto;
                 width: 200px;
                 float: right;
                 margin-bottom: 15px;

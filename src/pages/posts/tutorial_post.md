@@ -1,15 +1,14 @@
 ---
 title: 'Tutorial Blog Post'
-pubDate: 7/14/23
+pubDate: 7/14/23, 10:19PM
 description: 'This is the first post of my new Astro blog.'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'The full Astro logo.'
-tags: ["astro", "blogging", "learning in public"]
 layout: ../../layouts/BlogLayout.astro
 ---
 
-### **__THIS IS A TUTORIAL POST__**. It is meant to be read in conjunction with the [Astro Tutorial](https://docs.astro.build/getting-started/tutorial).
+### **__THIS IS A TUTORIAL POST__**. It is meant to be read in conjunction with the [Astro Tutorial](https://docs.astro.build/en/tutorial/0-introduction/).
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 

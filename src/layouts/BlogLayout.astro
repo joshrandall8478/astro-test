@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 const { frontmatter } = Astro.props;
+let metaTitle = "Joshua Randall - " + frontmatter.title;
 ---
 
 <html>
@@ -12,15 +13,15 @@ const { frontmatter } = Astro.props;
 
     <!-- Open Graph Data -->
     <meta name="og:site_name" content="Joshua Randall">
-    <meta property="og:title" content="Joshua Randall - Main">
+    <meta property="og:title" content={metaTitle} >
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/images/preview.png">
+    <meta property="og:image" content={frontmatter.image.url}>
     <meta property="og:url" content="https://joshrandall.net">
     <meta property="og:description" content="Main website for Joshua Randall">
     <!-- <meta name="theme-color" content="#77DD77"> -->
 
     <!-- Stylesheet and Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../src/images/favicon.ico">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +34,7 @@ const { frontmatter } = Astro.props;
 
     <!-- FontAwesome Javascript Link -->
     <script src="https://kit.fontawesome.com/61a8afa681.js" crossorigin="anonymous"></script>
-    <title>Josh Randall - Home</title>
+    <title>Josh Randall - {frontmatter.title}</title>
 </head>
   <body>
     <!-- Navbar -->
@@ -82,10 +83,11 @@ const { frontmatter } = Astro.props;
     
   <div class="main">
     <div class="main__container">
+        
+      <div class="blog__container">
         <div id="back__container">
             <a href="/blog"><i class="fa fa-arrow-left"></i> <span>Back to Blogs</span></a>
         </div>
-      <div class="main__content">
         <div class="blog__content">
             <h1>{frontmatter.title}</h1>
             <h2>Published: {frontmatter.pubDate}</h2>

@@ -90,6 +90,12 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
+*::-moz-selection {
+  background: #77DD77;
+}
+*::selection {
+  background: #77DD77;
+}
 
 html {
   background-color: #131313;
@@ -282,6 +288,26 @@ body {
   align-items: center;
   padding: 0 1rem;
   width: 100%;
+}
+
+.button {
+  border: 3px #77DD77 solid;
+  border-radius: 25px;
+  background: none;
+  opacity: 0;
+  animation: 0.5s ease-out 1s easeInToBottom;
+  animation-fill-mode: forwards;
+  font-size: 2em;
+  color: #77DD77;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  color: #C1E1C1;
+  border: 3px #C1E1C1 solid;
+  transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 1000px) {

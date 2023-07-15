@@ -2,7 +2,7 @@ $color_1: whitesmoke;
 $color_2: #C1E1C1;
 $color_3: #77DD77;
 $color_4: grey;
-$color_5: #fff;
+$color_5: B7C4AA;
 $font-family_1: 'Poppins', sans-serif;
 $background-color_1: #131313;
 
@@ -98,6 +98,9 @@ $background-color_1: #131313;
 	margin: 0;
 	padding: 0;
 	font-family: $font-family_1;
+	&::selection{
+		background: $color_3;
+	}
 }
 // &:root {
 // 	--main-bg-color: ;
@@ -282,6 +285,26 @@ body {
 	align-items: center;
 	padding: 0 1rem;
 	width: 100%;
+}
+
+.button {
+	border: 3px $color_3 solid;
+	border-radius: 25px;
+	background: none;
+	opacity: 0;
+	animation: 0.5s ease-out 1s easeInToBottom;
+	animation-fill-mode: forwards;
+	font-size: 2em;
+	color: $color_3;
+	padding: 10px 20px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	&:hover {
+		color: $color_2;
+		border: 3px $color_2 solid;
+		transition: all 0.3s ease;
+	}
 }
 @media screen and (max-width: 1000px) {
 	.main__content {
