@@ -52,9 +52,7 @@ const { frontmatter } = Astro.props;
   <div class="main">
     <div class="main__container">
       <div class="main__content">
-        <h1 id="404">{frontmatter.title}</h1>
-        <slot />
-        <!-- Markdown content is injected here -->
+        <h1 id="404_header" style="text-align:center">{frontmatter.title}</h1>
       </div>
     </div>
   </div>
