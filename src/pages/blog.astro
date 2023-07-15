@@ -83,8 +83,30 @@ const allPosts = await Astro.glob('./posts/*.md');
     <div class="main">
         <div class="main__container">
             <div class="main__content">
-                <ul>
-                    {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+                <ul class="blog__list">
+                    {allPosts.map((post) => 
+                    <li>
+                        <a href={post.url}>
+                    <div class="blog__item">
+                        <div>
+                        <h2>
+                            {post.frontmatter.title}
+                        </h2>
+                        <h3>
+                            Published: {post.frontmatter.pubDate}
+                        </h3>
+                        <p>
+                            {post.frontmatter.description}
+                            </p>
+                        </div>
+                        <div>
+                            <img src={post.frontmatter.image.url}>
+                        </div>
+                    </a>
+                    </li>
+                    </div>
+                    <hr>
+                    )}
                 </ul>
             </div>
         </div>

@@ -3,16 +3,22 @@
 .navbar {
     opacity: 1;
     animation: none;
-    transition: all 1s ease;
 }
 
-body {
+html{
     background-color: #131313;
-    overflow-x: hidden;
     animation: none;
 }
 
+
+li::marker 
+{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
 .main__content {
+    text-align: left;
     h1 {
         font-size: 5rem;
         animation: none;
@@ -27,9 +33,69 @@ body {
 		padding: 13px 0;
 		opacity: 1;
 		animation: none;
-        text-align: left;
 	}
     img {
         padding: 10px;
+    }
+}
+
+.blog__list {
+    .blog__item{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    p{ 
+        font-size: 1rem;
+    }
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            color: $color_1;
+            &:hover {
+                color: $color_2;
+                transition: all 0.3s ease;
+            }
+        }
+        img{
+            border: 2px solid $color_3;
+            border-radius: 25px;
+            height: 100px;
+            width: auto;
+            float: right;
+        }
+    }
+    color: $color_1;
+}
+
+#404 {
+    text-align: center;
+}
+
+#back {
+    margin-top: 10px;
+    color: $color_1;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin: 0 5px;
+    text-align: center;
+    a{
+        font-size: 2em;
+        margin: 0 5px;
+        margin-top: 7px;
+        margin-right: 10px;
+        text-decoration: none;
+        color: $color_1;
+        &:hover {
+            color: $color_2;
+            transition: all 0.3s ease;
+        }
     }
 }

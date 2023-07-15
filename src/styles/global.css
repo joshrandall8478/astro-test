@@ -64,6 +64,14 @@
     transform: translateY(0);
   }
 }
+@keyframes blackFade {
+  0% {
+    background-color: black;
+  }
+  100% {
+    background-color: #131313;
+  }
+}
 /* .main__links svg{
 
     margin: 0 10px;
@@ -86,10 +94,12 @@
 html {
   background-color: #131313;
   overflow-x: hidden;
+  background-color: black;
+  animation: 1s ease-out 0.6s blackFade;
+  animation-fill-mode: forwards;
 }
 
 body {
-  background-color: #131313;
   overflow-x: hidden;
 }
 
@@ -207,7 +217,7 @@ body {
   top: 0;
   z-index: 999;
   opacity: 0;
-  animation: 0.6s ease 0.4s 1 easeInToBottom;
+  animation: 0.6s ease 1s 1 easeInToBottom;
   animation-fill-mode: forwards;
 }
 
@@ -392,15 +402,21 @@ body {
 .navbar {
   opacity: 1;
   animation: none;
-  transition: all 1s ease;
 }
 
-body {
+html {
   background-color: #131313;
-  overflow-x: hidden;
   animation: none;
 }
 
+li::marker {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.main__content {
+  text-align: left;
+}
 .main__content h1 {
   font-size: 5rem;
   animation: none;
@@ -415,8 +431,64 @@ body {
   padding: 13px 0;
   opacity: 1;
   animation: none;
-  text-align: left;
 }
 .main__content img {
   padding: 10px;
+}
+
+.blog__list {
+  color: whitesmoke;
+}
+.blog__list .blog__item {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.blog__list h3 {
+  font-size: 1.5rem;
+}
+.blog__list h2 {
+  font-size: 2rem;
+}
+.blog__list p {
+  font-size: 1rem;
+}
+.blog__list li {
+  list-style: none;
+}
+.blog__list li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.blog__list li a:hover {
+  color: #C1E1C1;
+  transition: all 0.3s ease;
+}
+.blog__list li img {
+  border: 2px solid #77DD77;
+  border-radius: 25px;
+  height: 100px;
+  width: auto;
+  float: right;
+}
+
+#back {
+  margin-top: 10px;
+  color: whitesmoke;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin: 0 5px;
+  text-align: center;
+}
+#back a {
+  font-size: 2em;
+  margin: 0 5px;
+  margin-top: 7px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+#back a:hover {
+  color: #C1E1C1;
+  transition: all 0.3s ease;
 }/*# sourceMappingURL=global.css.map */

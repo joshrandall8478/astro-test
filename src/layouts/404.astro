@@ -31,6 +31,9 @@ const { frontmatter } = Astro.props;
               <li class="navbar__item">
                   <a href="/about.html" class="navbar__links">About</a>
               </li>
+              <li>
+                    <a href="/blog.html" class="navbar__links">Blog</a>
+              </li>
               <!-- <li class="navbar__item">
                   <a class="navbar__links">Projects</a>
               </li> -->
@@ -49,8 +52,7 @@ const { frontmatter } = Astro.props;
   <div class="main">
     <div class="main__container">
       <div class="main__content">
-        <h1>{frontmatter.title}</h1>
-        <p>{frontmatter.description}</p>
+        <h1 id="404">{frontmatter.title}</h1>
         <slot />
         <!-- Markdown content is injected here -->
       </div>
