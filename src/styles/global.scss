@@ -1,0 +1,29 @@
+@import "./index.scss";
+
+.navbar {
+    opacity: 1;
+    animation: none;
+    transition: all 1s ease;
+}
+
+.main__content {
+    h1 {
+        font-size: 5rem;
+        animation: none;
+    }
+    h2 {
+		font-size: 2rem;
+		opacity: 1;
+        animation: none;
+	}
+	p {
+		font-size: 1.6rem;
+		padding: 13px 0;
+		opacity: 1;
+		animation: none;
+        text-align: left;
+	}
+    img {
+        padding: 10px;
+    }
+}

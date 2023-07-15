@@ -237,7 +237,7 @@ body {
   transform: translate(0px, 10px);
 }
 #navbar__logo:hover {
-  fill: #C1E1C1;
+  fill: #77DD77;
   transition: all 0.3s ease;
 }
 
@@ -388,4 +388,29 @@ body {
   .main__links {
     font-size: 3rem;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+.navbar {
+  opacity: 1;
+  animation: none;
+  transition: all 1s ease;
+}
+
+.main__content h1 {
+  font-size: 5rem;
+  animation: none;
+}
+.main__content h2 {
+  font-size: 2rem;
+  opacity: 1;
+  animation: none;
+}
+.main__content p {
+  font-size: 1.6rem;
+  padding: 13px 0;
+  opacity: 1;
+  animation: none;
+  text-align: left;
+}
+.main__content img {
+  padding: 10px;
+}/*# sourceMappingURL=global.css.map */
