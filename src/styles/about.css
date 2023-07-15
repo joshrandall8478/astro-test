@@ -237,7 +237,7 @@ body {
   transform: translate(0px, 10px);
 }
 #navbar__logo:hover {
-  fill: #77DD77;
+  fill: #C1E1C1;
   transition: all 0.3s ease;
 }
 
@@ -416,6 +416,12 @@ body {
     width: 250px;
   }
 }
+body {
+  background-color: #131313;
+  overflow-x: hidden;
+  animation: none;
+}
+
 .navbar {
   opacity: 1;
   animation: none;
