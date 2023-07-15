@@ -86,11 +86,13 @@ const { frontmatter } = Astro.props;
             <a href="/blog"><i class="fa fa-arrow-left"></i> <span>Back to Blogs</span></a>
         </div>
       <div class="main__content">
-        <h1>{frontmatter.title}</h1>
-        <h2>Published: {frontmatter.pubDate}</h2>
-        <img class="blog-image" src={frontmatter.image.url} alt={frontmatter.image.alt}>
-        <slot />
-        <!-- Markdown content is injected here -->
+        <div class="blog__content">
+            <h1>{frontmatter.title}</h1>
+            <h2>Published: {frontmatter.pubDate}</h2>
+            <img class="blog-image" src={frontmatter.image.url} alt={frontmatter.image.alt}>
+            <hr>
+            <slot />
+        </div>
       </div>
     </div>
   </div>

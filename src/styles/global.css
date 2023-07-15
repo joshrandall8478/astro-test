@@ -409,6 +409,14 @@ html {
   animation: none;
 }
 
+h3 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
 li::marker {
   font-size: 2rem;
   font-weight: bolder;
@@ -422,7 +430,7 @@ li::marker {
   animation: none;
 }
 .main__content h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   opacity: 1;
   animation: none;
 }
@@ -475,8 +483,18 @@ li::marker {
   margin-bottom: 15px;
 }
 
-.blog-image img {
+.blog-image {
   border: 3px solid #77DD77;
+  border-radius: 25px;
+}
+
+.blog__content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.blog__content hr {
+  border: 3px solid grey;
+  margin: 15px 0;
   border-radius: 25px;
 }
 
@@ -510,4 +528,54 @@ li::marker {
   border: 3px solid #77DD77;
   color: #C1E1C1;
   transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1000px) {
+  .blog__content h1 {
+    font-size: 3rem;
+  }
+  .blog__content h2 {
+    font-size: 2rem;
+  }
+  .blog__content img {
+    width: 200px;
+  }
+  .blog__list {
+    color: whitesmoke;
+  }
+  .blog__list .blog__item {
+    display: grid;
+    grid-templatte-rows: 1fr 1fr;
+  }
+  .blog__list h3 {
+    font-size: 1.5rem;
+  }
+  .blog__list h2 {
+    font-size: 2rem;
+  }
+  .blog__list p {
+    font-size: 1rem;
+  }
+  .blog__list li {
+    list-style: none;
+  }
+  .blog__list li a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  .blog__list li a:hover {
+    color: #C1E1C1;
+    transition: all 0.3s ease;
+  }
+  .blog__list li img {
+    border: 2px solid #77DD77;
+    border-radius: 25px;
+    height: auto;
+    width: 200px;
+    float: right;
+    margin-bottom: 15px;
+  }
+  .blog__list hr {
+    margin-bottom: 15px;
+  }
 }/*# sourceMappingURL=global.css.map */

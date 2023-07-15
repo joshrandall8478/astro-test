@@ -10,7 +10,13 @@ html{
     animation: none;
 }
 
+h3{
+    font-size: 2rem;
+}
 
+h2{
+    font-size: 3rem;
+}
 li::marker 
 {
     font-size: 2rem;
@@ -24,7 +30,7 @@ li::marker
         animation: none;
     }
     h2 {
-		font-size: 2rem;
+        font-size: 3rem;
 		opacity: 1;
         animation: none;
 	}
@@ -79,9 +85,21 @@ li::marker
 }
 
 
-.blog-image img{
+.blog-image{
     border: 3px solid $color_3;
     border-radius: 25px;
+}
+
+.blog__content{
+    h2{
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    hr{
+        border: 3px solid $color_4;
+        margin: 15px 0;
+        border-radius: 25px;
+    }
 }
 
 #back__container {
@@ -113,5 +131,58 @@ li::marker
             color: $color_2;
             transition: all 0.3s ease;
         }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .blog__content{
+        h1{
+            font-size: 3rem;
+        }
+        h2{
+            font-size: 2rem;
+        }
+        img {
+            width: 200px;
+        }
+    }
+    
+    .blog__list {
+        .blog__item{
+            display: grid;
+            grid-templatte-rows: 1fr 1fr;
+        }
+        h3{
+            font-size: 1.5rem;
+        }
+        h2{
+            font-size: 2rem;
+        }
+        p{ 
+            font-size: 1rem;
+        }
+        li{
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: $color_1;
+                &:hover {
+                    color: $color_2;
+                    transition: all 0.3s ease;
+                }
+            }
+            img{
+                border: 2px solid $color_3;
+                border-radius: 25px;
+                height: auto;
+                width: 200px;
+                float: right;
+                margin-bottom: 15px;
+            }
+        }
+        hr{
+            margin-bottom: 15px;
+        }
+        color: $color_1;
     }
 }
